@@ -1,18 +1,9 @@
 package it.unina.prova.entity;
 
-import java.sql.Date;
-
 public class DataEsame {
 	private java.sql.Date data;
 	private String luogo;
 	private TipoProva tipo;
-	
-	public DataEsame() {
-		java.util.Date d = new java.util.Date();
-		data = new java.sql.Date(d.getTime());
-		luogo = "";
-		tipo = TipoProva.GENERICA;
-	}
 	
 	@SuppressWarnings("deprecation")
 	public DataEsame(int year, int month, int day, String luogo, TipoProva tipo) {
@@ -41,5 +32,11 @@ public class DataEsame {
 		return data;
 	}
 
-	
+	public void setData(java.sql.Date data) {
+		this.data = data;
+	}
+
+	public String toString() {
+		return tipo.toString() + " " + luogo + " " + data.toString();
+	}
 }
