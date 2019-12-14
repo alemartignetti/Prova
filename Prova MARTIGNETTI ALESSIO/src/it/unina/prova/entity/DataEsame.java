@@ -7,7 +7,7 @@ public class DataEsame {
 	
 	@SuppressWarnings("deprecation")
 	public DataEsame(int year, int month, int day, String luogo, TipoProva tipo) {
-		this.data = new java.sql.Date(year - 1900, month + 1, day);
+		this.data = new java.sql.Date(year - 1900, month - 1, day);
 		this.luogo = luogo;
 		this.tipo = tipo;
 	}

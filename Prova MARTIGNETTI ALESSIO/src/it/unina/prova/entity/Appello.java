@@ -60,7 +60,7 @@ public class Appello {
 	
 	public String toString() {
 		StringBuffer s = new StringBuffer();
-		s.append("Appello ");
+		s.append("ID Appello: ");
 		s.append(id);
 		s.append("\n");
 		for (DataEsame d : date) {

@@ -5,9 +5,9 @@ import it.unina.prova.entity.*;
 
 public abstract class GestoreDati {
 
-	static private ArrayList<Docente> docenti;
-	static private ArrayList<Corso> corsi;
-	static private ArrayList<Studente> studenti;
+	static private ArrayList<Docente> docenti = new ArrayList<Docente>();
+	static private ArrayList<Corso> corsi = new ArrayList<Corso>();
+	static private ArrayList<Studente> studenti = new ArrayList<Studente>();
 	
 	static public void creaCorso(String codiceCorso, String nome, int crediti, String codiceDocente) {
 		for (Docente d : docenti) {
@@ -32,6 +32,15 @@ public abstract class GestoreDati {
 			}
 		}
 		return 0;
+	}
+	
+	static public void creaData(int year, int month, int day, String luogo, TipoProva tipo, String codiceCorso, int idAppello) {
+		for (Appello a : visualizzaAppelli(codiceCorso)) {
+			if (a.getId() == idAppello) {
+				a.aggiungiData(year, month, day, luogo, tipo);
+			}
+		}
+		return;
 	}
 	
 	static public ArrayList<Appello> visualizzaAppelli(String codiceCorso) {
