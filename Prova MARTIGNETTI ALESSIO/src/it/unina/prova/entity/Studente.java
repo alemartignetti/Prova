@@ -39,5 +39,15 @@ public class Studente {
 	public String toString() {
 		return cognome + " " + nome + " " + matricola;
 	}
+	
+	public boolean equals(Studente s) {
+		if (s.getMatricola().equals(matricola) &&
+			s.getNome().equals(nome) &&
+			s.getCognome().equals(cognome)) 
+		{
+			return true;
+		} else
+			return false;
+	}
 
 }
