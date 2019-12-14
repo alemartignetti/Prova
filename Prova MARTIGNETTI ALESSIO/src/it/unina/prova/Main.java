@@ -52,6 +52,10 @@ public class Main {
 		for (Appello a : GestoreDati.visualizzaAppelli("AM1")) {
 			System.out.println(a.toString());
 		}
+		System.out.println("**********Appelli IS:**********");
+		for (Appello a : GestoreDati.visualizzaAppelli("IS")) {
+			System.out.println(a.toString());
+		}
 		
 	}
 
