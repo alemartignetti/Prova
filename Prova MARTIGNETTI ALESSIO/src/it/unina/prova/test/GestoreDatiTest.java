@@ -17,14 +17,6 @@ class GestoreDatiTest {
 
 	GestoreDati gestoreTest;
 
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
 	@BeforeEach
 	void setUp() throws Exception {
 		gestoreTest = new GestoreDati();
@@ -34,7 +26,6 @@ class GestoreDatiTest {
 	@AfterEach
 	void tearDown() throws Exception {
 		gestoreTest.clear();
-		gestoreTest = null;
 	}
 
 	@Test
