@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Corso {
 
+	private int numAppelli = 1;
 	private String codiceCorso;
 	private String nome;
 	private int crediti;
@@ -19,7 +20,8 @@ public class Corso {
 	}
 	
 	public int aggiungiAppello(int year, int month, int day, String luogo, TipoProva tipo) {
-		Appello nuovoAppello = new Appello(year,month,day,luogo,tipo);
+		Appello nuovoAppello = new Appello(numAppelli,year,month,day,luogo,tipo);
+		++numAppelli;
 		appelli.add(nuovoAppello);
 		return nuovoAppello.getId(); //ritorna id appello creato
 	}

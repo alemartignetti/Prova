@@ -4,23 +4,12 @@ import java.util.ArrayList;
 
 public class Appello {
 
-	static private int numAppelli = 1;
 	private int id;
 	private ArrayList<DataEsame> date;
 	private ArrayList<Studente> prenotati;
-
-	/*
-	public Appello(int id, boolean completato, ArrayList<DataEsame> date, ArrayList<Studente> prenotati) {
-		this.id = id;
-		this.completato = completato;
-		this.date = date;
-		this.prenotati = prenotati;
-	}
-	*/
 	
-	public Appello(int year, int month, int day, String luogo, TipoProva tipo) {
-		id = numAppelli;
-		++numAppelli;
+	public Appello(int id, int year, int month, int day, String luogo, TipoProva tipo) {
+		this.id = id;
 		date = new ArrayList<DataEsame>();
 		prenotati = new ArrayList<Studente>();
 		this.aggiungiData(year, month, day, luogo, tipo);
