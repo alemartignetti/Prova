@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Corso {
 
-	private int nextIDAppello = 1;
+	private int nextIDAppello = 1; //gli appelli sono numerati per corso. Ogni corso ha appello1, appello2...
 	private String codiceCorso;
 	private String nome;
 	private int crediti;

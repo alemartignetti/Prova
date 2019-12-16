@@ -2,7 +2,7 @@ package it.unina.prova.entity;
 
 import java.util.ArrayList;
 
-public class Appello {
+public class Appello { //la classe Appello è gestita completamente dalla classe Corso.
 
 	private int id;
 	private ArrayList<DataEsame> date;
@@ -12,7 +12,7 @@ public class Appello {
 		this.id = id;
 		date = new ArrayList<DataEsame>();
 		prenotati = new ArrayList<Studente>();
-		this.aggiungiData(year, month, day, luogo, tipo);
+		this.aggiungiData(year, month, day, luogo, tipo); //un appello ha sempre almeno una data.
 	}
 	
 	public void aggiungiData(int year, int month, int day, String luogo, TipoProva tipo) {

@@ -1,7 +1,8 @@
 package it.unina.prova.entity;
 
-public class DataEsame {
-	private java.sql.Date data;
+public class DataEsame { //la classe DataEsame è gestita completamente dalla classe Appello.
+	
+	private java.sql.Date data; //per possibile implementazione in un DB
 	private String luogo;
 	private TipoProva tipo;
 	
