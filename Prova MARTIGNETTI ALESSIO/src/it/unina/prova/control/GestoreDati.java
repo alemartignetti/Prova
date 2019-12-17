@@ -35,12 +35,11 @@ public class GestoreDati {
 	}
 	
 	public void creaData(int year, int month, int day, String luogo, TipoProva tipo, String codiceCorso, int idAppello) {
-		for (Appello a : visualizzaAppelli(codiceCorso)) {
-			if (a.getId() == idAppello) {
-				a.aggiungiData(year, month, day, luogo, tipo);
+		for (Corso c : corsi) {
+			if (c.getCodiceCorso().equals(codiceCorso)) {
+				c.aggiungiData(year, month, day, luogo, tipo, idAppello);
 			}
 		}
-		return;
 	}
 	
 	public ArrayList<Appello> visualizzaAppelli(String codiceCorso) {

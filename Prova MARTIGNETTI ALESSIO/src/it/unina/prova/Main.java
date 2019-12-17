@@ -19,13 +19,15 @@ public class Main {
 		
 		gestoreMain.creaStudente("Alessio", "Martignetti", "N46");
 		gestoreMain.creaStudente("Manuel", "Maddaluno", "N47");
-		gestoreMain.creaStudente("Diodato", "Todisco", "N48");
+		gestoreMain.creaStudente("Domenico", "Palladino", "N48");
 		
 		int appelloEG = gestoreMain.creaAppello(2019, 12, 16, "SG-T2", TipoProva.SCRITTA, "EG");
 		int appelloAM1 = gestoreMain.creaAppello(2020, 1, 21, "SG-I2", TipoProva.SCRITTA, "AM1");
 		int appelloIS = gestoreMain.creaAppello(2019, 12, 19, "SG-I1", TipoProva.AL_CALCOLATORE, "IS");
+		gestoreMain.creaAppello(2020, 2, 5, "SG-II1", TipoProva.SCRITTA, "IS");
 		
 		gestoreMain.creaData(2020, 1, 23, "SG-II4", TipoProva.ORALE, "AM1", appelloAM1);
+		gestoreMain.creaData(2020, 1, 14, "SG-I4", TipoProva.ORALE, "IS", appelloIS);
 		
 		gestoreMain.prenotaAppello("N46", "EG", appelloEG);
 		gestoreMain.prenotaAppello("N46", "IS", appelloIS);

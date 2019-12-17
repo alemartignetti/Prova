@@ -25,6 +25,14 @@ public class Corso {
 		appelli.add(nuovoAppello);
 		return nuovoAppello.getId(); //ritorna id appello creato
 	}
+	
+	public void aggiungiData(int year, int month, int day, String luogo, TipoProva tipo, int idAppello) {
+		for (Appello a : appelli) {
+			if (a.getId() == idAppello) {
+				a.aggiungiData(year, month, day, luogo, tipo);
+			}
+		}
+	}
 
 	public String getCodiceCorso() {
 		return codiceCorso;
