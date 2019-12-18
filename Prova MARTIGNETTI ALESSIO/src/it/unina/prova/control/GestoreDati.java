@@ -18,10 +18,18 @@ public class GestoreDati {
 	}
 	
 	public void creaDocente(String nome, String cognome, String codiceDocente) {
+		for (Docente d : docenti) {
+			if (d.getCodiceDocente().equals(codiceDocente))
+				return;
+		}
 		docenti.add(new Docente(nome,cognome,codiceDocente));
 	}
 	
 	public void creaStudente(String nome, String cognome, String matricola) {
+		for (Studente s : studenti) {
+			if (s.getMatricola().equals(matricola))
+				return;
+		}
 		studenti.add(new Studente(nome,cognome,matricola));
 	}
 	
@@ -67,7 +75,12 @@ public class GestoreDati {
 			if (s.getMatricola().equals(matricola)) {
 				for (Appello a : visualizzaAppelli(codiceCorso)) {
 					if (a.getId() == idAppello) {
+						for (Studente s1 : a.getPrenotati()) {
+							if (s1.getMatricola().equals(matricola))
+								return;
+						}
 						a.aggiungiStudente(s);
+						return;
 					}
 				}
 			}

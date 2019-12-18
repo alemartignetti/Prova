@@ -30,6 +30,7 @@ public class Main {
 		gestoreMain.creaData(2020, 1, 14, "SG-I4", TipoProva.ORALE, "IS", appelloIS);
 		
 		gestoreMain.prenotaAppello("N46", "EG", appelloEG);
+		gestoreMain.prenotaAppello("N46", "EG", appelloEG); //non posso prenotarmi più di una volta
 		gestoreMain.prenotaAppello("N46", "IS", appelloIS);
 		gestoreMain.prenotaAppello("N47", "EG", appelloEG);
 		gestoreMain.prenotaAppello("N47", "IS", appelloIS);
